@@ -1,0 +1,71 @@
+buildscript {
+    repositories {
+        jcenter()
+    }
+
+    dependencies {
+        classpath 'org.asciidoctor:asciidoctor-gradle-plugin:1.5.2'
+        classpath 'com.github.jruby-gradle:jruby-gradle-plugin:0.1.5'
+    }
+}    
+
+apply plugin: 'org.asciidoctor.gradle.asciidoctor'
+apply plugin: 'com.github.jruby-gradle.base'
+
+repositories {
+    jcenter()
+}
+dependencies {
+    gems 'rubygems:asciidoctor-diagram:1.2.0'
+    //gems 'rubygems:slim:2.1.0'
+}
+
+
+asciidoctorj {
+    version = '1.5.2'
+}
+
+asciidoctor {
+    dependsOn jrubyPrepareGems
+    gemPath = jrubyPrepareGems.outputDir
+    requires 'asciidoctor-diagram' 
+}
+
+
+defaultTasks 'asciidoctor'
+
+
+asciidoctor {
+
+    sources {
+        include 'presentation.adoc'
+    }
+
+    resources {
+        from(sourceDir) {
+            include 'reveal.js/**'
+            include 'stylesheets/img/**'
+            include 'images/**'
+        }
+    }
+
+    backends = ['revealjs']
+
+    requires 'slim', 'thread_safe'
+
+    options  template_dirs: ["${projectDir}/src/templates/slim".toString()]
+
+
+    attributes revealjs_control: true,
+               revealjs_center: true,
+               revealjs_transition: 'linear',
+               revealjs_slideNumber: true,
+               revealjs_theme: 'jdriven'
+
+    //attributes 'source-highlighter': 'highlight.js'
+    attributes 'source-highlighter': 'coderay'
+
+    attributes images: './images'
+
+
+}

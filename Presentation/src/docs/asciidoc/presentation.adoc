@@ -1,0 +1,25 @@
+= Greach 2015 - Grails Goodness
+
+
+== Hubert Klein Ikkink (mrhaki)
+
+* Java developer for many years (since 1996)
+* Live in The Netherlands (Tilburg)
+* Work at JDriven as developer
+* Started with Groovy in 2008
+* http://mrhaki.blogspot.com blog about Groovy, Grails, Gradle and more
+* Twitter: @mrhaki
+* Code on https://github.com/mrhaki/greach2015-grails-goodness
+
+== Agenda
+
+* Command line
+* Spring
+* Controllers
+* RESTful API's
+
+(all based on pre Grails 3)
+
+== More
+
+* Code on https://github.com/mrhaki/greach2015-grails-goodness
