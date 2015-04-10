@@ -4,7 +4,7 @@
 # to generate your .gitignore file.
 
 # web application files
-/web-app/WEB-INF/classes
+web-app/WEB-INF/classes
 
 # default HSQL database files for production mode
 /prodDb.*
@@ -14,24 +14,25 @@
 *Db.script
 
 # logs
-/stacktrace.log
-/test/reports
-/logs
+stacktrace.log
+test/reports
+logs
 
 # project release file
-/*.war
+*.war
 
 # plugin release files
-/*.zip
-/plugin.xml
+*.zip
+plugin.xml
 
 # older plugin install locations
-/plugins
-/web-app/plugins
+plugins
+web-app/plugins
 
 # "temporary" build files
-/target
+target
 
 build
 .gradle
+ 
 
