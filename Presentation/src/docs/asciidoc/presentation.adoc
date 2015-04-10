@@ -1,4 +1,4 @@
-= Greach 2015 - Grails Goodness
+= Greach 2015 - Grails (< 3) Goodness
 
 
 == Hubert Klein Ikkink (mrhaki)
