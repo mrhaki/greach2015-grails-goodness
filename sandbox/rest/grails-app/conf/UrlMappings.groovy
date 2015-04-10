@@ -1,0 +1,15 @@
+class UrlMappings {
+
+	static mappings = {
+        "/courses"(resources: 'course', excludes: ['create', 'edit'])
+
+        "/$controller/$action?/$id?(.$format)?"{
+            constraints {
+                // apply constraints here
+            }
+        }
+
+        "/"(view:"/index")
+        "500"(view:'/error')
+	}
+}
