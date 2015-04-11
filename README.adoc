@@ -6,4 +6,6 @@ The `demo` folder contains the code shown during the session.
 
 The `sandbox` folder contains more code for which there was no time to show during the session.
 
+To view the presentation run `gradle -b presentation.gradle` from the `Presentation` folder.
+
 Enjoy.
